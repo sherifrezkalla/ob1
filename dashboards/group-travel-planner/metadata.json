@@ -1,0 +1,19 @@
+{
+  "name": "Curaçao Group Travel Planner Dashboard",
+  "description": "A shareable dashboard for budgeting, itinerary planning, dining reservations, and transport logistics for an 8-person Curaçao trip.",
+  "category": "dashboards",
+  "author": {
+    "name": "OpenAI Codex"
+  },
+  "version": "1.0.0",
+  "requires": {
+    "open_brain": true,
+    "services": [],
+    "tools": ["Modern web browser"]
+  },
+  "tags": ["travel", "curacao", "budget", "itinerary", "logistics"],
+  "difficulty": "beginner",
+  "estimated_time": "20 minutes",
+  "created": "2026-05-24",
+  "updated": "2026-05-24"
+}

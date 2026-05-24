@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curaçao Group Travel Planner</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 0; background: #f3f8ff; color: #18334a; }
+      main { max-width: 1000px; margin: 0 auto; padding: 24px; }
+      h1,h2 { margin-bottom: 8px; }
+      .card { background: #fff; border-radius: 12px; padding: 16px; margin-bottom: 16px; box-shadow: 0 1px 6px rgba(0,0,0,.1); }
+      .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:12px; }
+      label { font-size: 0.9rem; display:block; margin-bottom:4px; }
+      input,select,textarea { width: 100%; padding: 8px; border: 1px solid #c7d5e0; border-radius: 8px; }
+      table { width:100%; border-collapse: collapse; margin-top:8px; }
+      th,td { border-bottom:1px solid #e3edf5; padding:8px; text-align:left; }
+      .tag { background:#e6f2ff; padding:4px 8px; border-radius: 999px; font-size:.8rem; }
+      ul { margin-top: 6px; }
+      .totals { font-weight:bold; color:#0e5c8f; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>8-Person Curaçao Trip Planner (August 2026)</h1>
+      <p>Shared planning dashboard for villa costs, flight estimates, itinerary blocks, dining reservations, and transport logistics.</p>
+
+      <section class="card">
+        <h2>1) Budget Tracker</h2>
+        <div class="grid">
+          <div><label>Villa nightly rate (USD)</label><input id="villaRate" type="number" value="950" /></div>
+          <div><label>Number of nights</label><input id="nights" type="number" value="7" /></div>
+          <div><label>Estimated taxes/fees (USD)</label><input id="villaFees" type="number" value="600" /></div>
+          <div><label>Estimated roundtrip flight per person (USD)</label><input id="flightPerPerson" type="number" value="780" /></div>
+        </div>
+        <p class="totals" id="budgetOutput"></p>
+      </section>
+
+      <section class="card">
+        <h2>2) Shared Itinerary Template</h2>
+        <table>
+          <thead>
+            <tr><th>Date</th><th>Morning</th><th>Afternoon</th><th>Evening</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Aug 8, 2026 (Sat)</td><td>Arrival + villa check-in</td><td>Grocery run</td><td>Welcome dinner at villa</td><td>Low-key first night</td></tr>
+            <tr><td>Aug 9, 2026 (Sun)</td><td>Beach Day <span class="tag">Cas Abou</span></td><td>Snorkel + relax</td><td>Dinner reservation</td><td>Book beach chairs in advance</td></tr>
+            <tr><td>Aug 10, 2026 (Mon)</td><td>Island driving loop</td><td>Downtown Willemstad</td><td>Sunset cocktails</td><td>Designate rotating driver</td></tr>
+            <tr><td>Aug 11, 2026 (Tue)</td><td>Beach Day <span class="tag">Jan Thiel</span></td><td>Water sports</td><td>Jan Thiel dining</td><td>Reserve activity slots</td></tr>
+            <tr><td>Aug 12, 2026 (Wed)</td><td>Free morning</td><td>Boat / Klein Curaçao option</td><td>Group dinner out</td><td>Backup indoor plan if windy</td></tr>
+            <tr><td>Aug 13, 2026 (Thu)</td><td>Local market + sightseeing</td><td>Pool/villa downtime</td><td>Chef night / BBQ</td><td>Split prep and cleanup</td></tr>
+            <tr><td>Aug 14, 2026 (Fri)</td><td>Flexible beach repeat</td><td>Shopping / packing</td><td>Farewell dinner reservation</td><td>Confirm return rides</td></tr>
+            <tr><td>Aug 15, 2026 (Sat)</td><td>Check-out</td><td>Airport transfer</td><td>Travel home</td><td>Buffer time for rental return</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2>3) Dining Reservation Planner</h2>
+        <table>
+          <thead><tr><th>Restaurant</th><th>Date</th><th>Time</th><th>Group Size</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td><input value="Oceanfront Dinner Spot"/></td><td><input type="date" value="2026-08-09"/></td><td><input value="19:00"/></td><td><input type="number" value="8"/></td><td><select><option>Requested</option><option>Confirmed</option></select></td></tr>
+            <tr><td><input value="Jan Thiel Grill"/></td><td><input type="date" value="2026-08-11"/></td><td><input value="20:00"/></td><td><input type="number" value="8"/></td><td><select><option>Requested</option><option>Confirmed</option></select></td></tr>
+            <tr><td><input value="Farewell Dinner Venue"/></td><td><input type="date" value="2026-08-14"/></td><td><input value="19:30"/></td><td><input type="number" value="8"/></td><td><select><option>Requested</option><option>Confirmed</option></select></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2>4) Transport Logistics Checklist (8 people)</h2>
+        <ul>
+          <li><input type="checkbox"/> Compare pricing: 1 large 9-passenger van vs 2 midsize SUVs/sedans.</li>
+          <li><input type="checkbox"/> Confirm luggage fit for 8 travelers (carry-on + checked bags).</li>
+          <li><input type="checkbox"/> Verify automatic transmission availability.</li>
+          <li><input type="checkbox"/> Add 2 approved drivers per vehicle for flexibility.</li>
+          <li><input type="checkbox"/> Validate insurance coverage + roadside assistance.</li>
+          <li><input type="checkbox"/> Plan airport pickup window on arrival day (Aug 8, 2026).</li>
+          <li><input type="checkbox"/> Set fueling + parking split rules before departure.</li>
+          <li><input type="checkbox"/> Save offline maps and key destinations (Cas Abou, Jan Thiel, villa, airport).</li>
+        </ul>
+      </section>
+    </main>
+
+    <script>
+      const ids = ["villaRate", "nights", "villaFees", "flightPerPerson"];
+      const output = document.getElementById("budgetOutput");
+
+      function calculateBudget() {
+        const villaRate = Number(document.getElementById("villaRate").value || 0);
+        const nights = Number(document.getElementById("nights").value || 0);
+        const villaFees = Number(document.getElementById("villaFees").value || 0);
+        const flightPerPerson = Number(document.getElementById("flightPerPerson").value || 0);
+
+        const groupSize = 8;
+        const villaTotal = villaRate * nights + villaFees;
+        const villaPerPerson = villaTotal / groupSize;
+        const flightTotal = flightPerPerson * groupSize;
+        const tripPerPerson = villaPerPerson + flightPerPerson;
+        const groupTotal = villaTotal + flightTotal;
+
+        output.textContent = `Villa total: $${villaTotal.toFixed(0)} | Villa per person: $${villaPerPerson.toFixed(0)} | Flights total: $${flightTotal.toFixed(0)} | Estimated trip per person: $${tripPerPerson.toFixed(0)} | Group total: $${groupTotal.toFixed(0)}`;
+      }
+
+      ids.forEach((id) => document.getElementById(id).addEventListener("input", calculateBudget));
+      calculateBudget();
+    </script>
+  </body>
+</html>
